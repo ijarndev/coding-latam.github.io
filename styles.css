@@ -233,6 +233,14 @@ a.yellow {
   font-size: 32px;
 }
 
+.nav {
+  position: sticky;
+  top: 0;
+  background: #ffffffcc;
+  backdrop-filter: blur(4px);
+  z-index: 50;
+}
+
 .nav__content {
   border-bottom: 1px solid #cccccc;
   padding: 10px 15px;
@@ -258,6 +266,16 @@ a.yellow {
 
 .nav__links {
   display: none;
+}
+
+.nav__links a {
+  font-size: 1.2em;
+  transition: .1s color;
+  border: none;
+}
+
+.nav__links a:hover {
+  border-bottom: 3px solid #fbc531;
 }
 
 @media (min-width: 992px) {
@@ -290,6 +308,19 @@ a.yellow {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #272727;
+}
+
+.nav__logo-name {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav__logo-name > span:nth-child(2) {
+  color: #fbc531;
 }
 
 .nav__logo a {
@@ -304,6 +335,7 @@ a.yellow {
 
 .nav__logo img {
   max-width: 50px;
+  border-radius: 100%;
 }
 
 .nav__logo span {
